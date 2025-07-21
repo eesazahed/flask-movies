@@ -12,7 +12,11 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
-kill -9 $(lsof -ti ":$PORT") 2>/dev/null
+PIDS=$(lsof -ti ":$PORT")
+if [ -n "$PIDS" ]; then
+  kill -9 $PIDS
+fi
+
 git pull
 python3 -m venv .venv
 source .venv/bin/activate
