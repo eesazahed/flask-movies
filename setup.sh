@@ -6,7 +6,6 @@ if [ "$#" -ne 1 ]; then
 fi
 
 PORT="$1"
-echo ":$PORT"
 
 if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
   echo "PORT must be a non-negative integer."
