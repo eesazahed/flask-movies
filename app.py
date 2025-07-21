@@ -64,6 +64,17 @@ def delete(id):
     return redirect(url_for('index'))
 
 
+@app.route('/commit')
+def commit():
+    output = os.popen('git log -1 --pretty=format:"%h|%s|%cr"').read()
+    commit_hash, description, time = output.strip().split('|')
+    return ({
+        'hash': commit_hash,
+        'description': description,
+        'time': time
+    })
+
+
 if __name__ == '__main__':
     init_db()
     port = int(os.environ.get('PORT', 5000))
