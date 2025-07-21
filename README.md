@@ -4,6 +4,7 @@ A CRUD app made with Flask
 
 Steps to get it on Nest:
 
+- Write a setup.sh script similar to [this](https://github.com/eesazahed/flask-movies/blob/main/setup.sh)
 - Get verified on Nest
 - SSH into your nest `ssh [USERNAME]@hackclub.app`
 - Run `git clone https://github.com/eesazahed/flask-movies.git`
