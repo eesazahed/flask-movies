@@ -1,3 +1,5 @@
+echo "Starting process..."
+
 if [ "$#" -ne 1 ]; then
   echo "Parameter required PORT"
   exit 1
@@ -17,3 +19,4 @@ source .venv/bin/activate
 pip install -r requirements.txt
 gunicorn -b ":$PORT" app:app
 
+echo "Setup complete."

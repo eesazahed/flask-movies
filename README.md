@@ -40,4 +40,4 @@ http://flask-movies.[USERNAME].hackclub.app {
 - Exit and save
 - Reload Caddy with `systemctl --user reload caddy`
 - Head over to https://flask-movies.[USERNAME].hackclub.app and check out the site!
-- If you ever want to update your code, run `systemctl --user restart flask-movies.service` and wait a minute or two
+- If you ever want to update your code push it to your GitHub repository for the project. Then run `systemctl --user restart flask-movies.service` and wait a minute or two
