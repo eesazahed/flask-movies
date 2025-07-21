@@ -12,7 +12,7 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
-PIDS=$(lsof -ti ":$PORT")
+PIDS=$(timeout 2s lsof -ti ":$PORT")
 if [ -n "$PIDS" ]; then
   kill -9 $PIDS
 fi
@@ -22,5 +22,4 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-gunicorn -b ":$PORT" app:app
-
+gunicorn -b ":$PORT" app:app --access-logfile - --error-logfile -
