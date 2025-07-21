@@ -2,12 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 from cs50 import SQL
 import os
 
-if not os.path.exists("movies.db"):
-    open("movies.db", "w").close()
+if not os.path.exists('movies.db'):
+    open('movies.db', 'w').close()
 
 
 app = Flask(__name__)
-db = SQL("sqlite:///movies.db")
+db = SQL('sqlite:///movies.db')
 
 
 def init_db():
