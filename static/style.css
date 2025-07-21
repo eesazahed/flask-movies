@@ -1,0 +1,27 @@
+body {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 0%;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+header {
+  background-color: #2c6868;
+  color: white;
+  padding: 2rem 3rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  background-color: #befeff;
+  padding: 2rem 3rem;
+}
