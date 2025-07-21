@@ -5,8 +5,6 @@ import os
 if not os.path.exists("movies.db"):
     open("movies.db", "w").close()
 
-db = SQL("sqlite:///movies.db")
-
 
 app = Flask(__name__)
 db = SQL("sqlite:///movies.db")
