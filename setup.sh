@@ -6,6 +6,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 PORT="$1"
+echo ":$PORT"
 
 if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
   echo "PORT must be a non-negative integer."
@@ -17,8 +18,6 @@ git pull
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-
-echo ":$PORT"
 
 gunicorn -b ":$PORT" app:app
 
