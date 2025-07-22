@@ -20,13 +20,13 @@ if [ -n "$PIDS" ]; then
   kill -9 $PIDS
 fi
 
-# Try to update code, create virtual environment, and install dependencies
+# Update code from GitHub repo
 if ! git pull; then
   echo "git pull failed"
   exit 1
 fi
 
-
+# Create virtual environment and install dependencies
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
