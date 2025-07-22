@@ -21,6 +21,11 @@ def init_db():
     ''')
 
 
+@app.errorhandler(404)
+def handle_404(e):
+    return render_template('custom404.html')
+
+
 @app.route('/')
 def index():
     movies = db.execute('SELECT * FROM movies')
