@@ -26,6 +26,9 @@ WantedBy=default.target
 ```
 
 - Run `systemctl --user daemon-reload`
+  - If you come across the error message: _"Failed to connect to user scope bus via local transport: $DBUS_SESSION_BUS_ADDRESS and $XDG_RUNTIME_DIR not defined (consider using --machine=<user>@.host --user to connect to bus of other user)"_
+  - Try to run `export XDG_RUNTIME_DIR="/run/user/$UID" export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"`
+  - Then try again and run `systemctl --user daemon-reload`
 - Then, run `systemctl --user enable --now flask-movies.service`
 - Now run `nest caddy add flask-movies.[USERNAME].hackclub.app`
 - Edit your Caddyfile by going into `nano Caddyfile`
