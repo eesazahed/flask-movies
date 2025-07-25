@@ -4,8 +4,8 @@ A CRUD app made with Flask
 
 Steps to get it on Nest:
 
-- Write a setup.sh script similar to [this](https://github.com/eesazahed/flask-movies/blob/main/setup.sh)
-- Get verified on Nest
+- Write a setup.sh script similar to [this](https://github.com/eesazahed/flask-movies/blob/main/setup.sh). You can customize it to your liking.
+- Get verified on [Nest](https://guides.hackclub.app/index.php/Verifying_your_student_status). This is required!
 - SSH into your nest `ssh [USERNAME]@hackclub.app`
 - Run `git clone https://github.com/eesazahed/flask-movies.git`
 - Find an empty nest port by `nest get_port` and remember what the number is
